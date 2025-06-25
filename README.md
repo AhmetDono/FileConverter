@@ -85,7 +85,16 @@ bashdocker run -d \
   rabbitmq:3-management
 ```
 
-5. **Worker süreçlerini başlatın:**
+5. **Api ve Clienti başlatın:**
+```bash
+cd api
+npm start
+ve
+cd client
+npm start
+```
+
+6. **Worker süreçlerini başlatın:**
 ```bash
 # Terminal 1: Convert Worker
 node workers/convertWorker.js
@@ -95,11 +104,6 @@ node workers/mergeWorker.js
 
 # Terminal 3: Split Worker
 node workers/splitWorker.js
-```
-
-6. **Ana serveri başlatın:**
-```bash
-npm start
 ```
 
 ## 🔗 API Endpoints

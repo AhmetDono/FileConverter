@@ -1,0 +1,27 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "amqplib": "^0.10.8",
+    "archiver": "^7.0.1",
+    "bcrypt": "^6.0.0",
+    "docx-pdf": "^0.0.1",
+    "express": "^5.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "mongoose": "^8.16.0",
+    "multer": "^2.0.1",
+    "nodemon": "^3.1.10",
+    "pdf-lib": "^1.17.1",
+    "pdfkit": "^0.17.1",
+    "uuid": "^11.1.0"
+  }
+}

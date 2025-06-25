@@ -1,0 +1,11 @@
+api +++++
+queu +++++++
+outputPath alanina son yol yazilacak +++++
+FileNames kismi required false yapilabiklir kullanicidan degil arka plandan aliyoiruz. ++++
+SSE ile status ekleme   +++++
+
+
+workerlar yazilacak // ++-
+split yapilacak --
+merge yapilacak +++
+ 

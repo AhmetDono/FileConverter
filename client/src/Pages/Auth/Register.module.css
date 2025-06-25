@@ -1,0 +1,458 @@
+/* Register.module.css */
+
+@keyframes titlePulse {
+  0% { transform: scale(1); }
+  100% { transform: scale(1.02); }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+@keyframes buttonPulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+  100% { transform: scale(1); }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #fff7ed 0%, #fed7aa 50%, #ea580c 100%);
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.title {
+  font-size: 3rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 10px;
+  text-shadow: 0 4px 8px rgba(234, 88, 12, 0.3);
+  animation: titlePulse 2s ease-in-out infinite alternate;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #7c2d12;
+  font-weight: 500;
+}
+
+.authCard {
+  max-width: 500px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 24px;
+  box-shadow: 0 20px 40px rgba(234, 88, 12, 0.15);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(234, 88, 12, 0.1);
+  overflow: hidden;
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.cardHeader {
+  padding: 40px 40px 20px;
+  text-align: center;
+  background: linear-gradient(135deg, rgba(254, 215, 170, 0.3), rgba(255, 247, 237, 0.8));
+}
+
+.cardTitle {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #7c2d12;
+  margin-bottom: 8px;
+}
+
+.cardSubtitle {
+  color: #9a3412;
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.form {
+  padding: 20px 40px 40px;
+}
+
+.nameRow {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.nameRow .inputGroup {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+.inputGroup {
+  margin-bottom: 24px;
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.label {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #7c2d12;
+  margin-bottom: 8px;
+}
+
+.input {
+  width: 100%;
+  padding: 16px 20px;
+  border: 2px solid #fed7aa;
+  border-radius: 12px;
+  font-size: 1rem;
+  background: rgba(255, 255, 255, 0.8);
+  transition: all 0.3s ease;
+  box-sizing: border-box;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ea580c;
+  background: white;
+  box-shadow: 0 0 0 4px rgba(234, 88, 12, 0.1);
+  transform: translateY(-1px);
+}
+
+.input::placeholder {
+  color: #9a3412;
+}
+
+.inputError {
+  border-color: #ef4444;
+  background: rgba(254, 242, 242, 0.8);
+}
+
+.inputError:focus {
+  border-color: #ef4444;
+  box-shadow: 0 0 0 4px rgba(239, 68, 68, 0.1);
+}
+
+.errorText {
+  display: block;
+  color: #ef4444;
+  font-size: 0.875rem;
+  font-weight: 500;
+  margin-top: 6px;
+}
+
+.passwordHint {
+  font-size: 0.8rem;
+  color: #9a3412;
+  margin-top: 6px;
+  font-style: italic;
+  opacity: 0.8;
+}
+
+.termsGroup {
+  margin-bottom: 32px;
+  padding: 16px;
+  background: rgba(255, 247, 237, 0.5);
+  border-radius: 12px;
+  border: 1px solid rgba(254, 215, 170, 0.5);
+}
+
+.checkboxLabel {
+  display: flex;
+  align-items: flex-start;
+  cursor: pointer;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 18px;
+  height: 18px;
+  margin-top: 2px;
+  accent-color: #ea580c;
+  cursor: pointer;
+}
+
+.checkboxText {
+  font-size: 0.9rem;
+  color: #7c2d12;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.termsLink {
+  color: #ea580c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.termsLink:hover {
+  color: #dc2626;
+  text-decoration: underline;
+}
+
+.submitButton {
+  width: 100%;
+  padding: 18px 24px;
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+  color: white;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  box-shadow: 0 8px 25px rgba(234, 88, 12, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.submitButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 35px rgba(234, 88, 12, 0.4);
+  animation: buttonPulse 0.6s ease-in-out;
+}
+
+.submitButton:active {
+  transform: translateY(0);
+}
+
+.submitButton:disabled {
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButtonLoading {
+  background: linear-gradient(135deg, #f59e0b, #d97706);
+  cursor: not-allowed;
+  transform: none;
+}
+
+.submitButtonLoading:hover {
+  transform: none;
+  animation: none;
+}
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-top: 2px solid white;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.divider {
+  position: relative;
+  text-align: center;
+  margin: 24px 40px;
+}
+
+.divider::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #fed7aa, transparent);
+}
+
+.dividerText {
+  background: rgba(255, 255, 255, 0.95);
+  padding: 0 16px;
+  color: #9a3412;
+  font-size: 0.9rem;
+  font-weight: 500;
+}
+
+.socialButtons {
+  padding: 0 40px 40px;
+}
+
+.socialButton {
+  width: 100%;
+  padding: 16px 24px;
+  background: white;
+  border: 2px solid #fed7aa;
+  border-radius: 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #7c2d12;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.socialButton:hover {
+  background: #fff7ed;
+  border-color: #ea580c;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 15px rgba(234, 88, 12, 0.1);
+}
+
+.socialIcon {
+  width: 20px;
+  height: 20px;
+}
+
+.authSwitch {
+  text-align: center;
+  padding: 20px 40px 40px;
+  color: #7c2d12;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(254, 215, 170, 0.5);
+  background: rgba(255, 247, 237, 0.3);
+}
+
+.authLink {
+  color: #ea580c;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.authLink:hover {
+  color: #dc2626;
+  text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+  }
+  
+  .authCard {
+    max-width: 100%;
+    margin: 0 10px;
+  }
+  
+  .cardHeader,
+  .form,
+  .socialButtons,
+  .authSwitch {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+  
+  .divider {
+    margin-left: 24px;
+    margin-right: 24px;
+  }
+  
+  .nameRow {
+    flex-direction: column;
+    gap: 0;
+  }
+  
+  .nameRow .inputGroup {
+    margin-bottom: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    font-size: 2rem;
+  }
+  
+  .cardHeader,
+  .form,
+  .socialButtons,
+  .authSwitch {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  .divider {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+  
+  .nameRow {
+    flex-direction: column;
+  }
+  
+  .checkboxText {
+    font-size: 0.85rem;
+  }
+  
+  .termsGroup {
+    padding: 12px;
+  }
+}
+
+/* Focus states for accessibility */
+.checkbox:focus {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+}
+
+.termsLink:focus {
+  outline: 2px solid #ea580c;
+  outline-offset: 2px;
+  border-radius: 4px;
+}
+
+/* Animation delays for staggered effect */
+.inputGroup:nth-child(1) { animation-delay: 0.1s; }
+.inputGroup:nth-child(2) { animation-delay: 0.2s; }
+.inputGroup:nth-child(3) { animation-delay: 0.3s; }
+.inputGroup:nth-child(4) { animation-delay: 0.4s; }
+.inputGroup:nth-child(5) { animation-delay: 0.5s; }
+.termsGroup { animation: slideInLeft 0.6s ease-out 0.6s both; }
+
+.errorMessage {
+  background: rgba(239, 68, 68, 0.1);
+  border: 1px solid rgba(239, 68, 68, 0.3);
+  color: #dc2626;
+  padding: 12px 16px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  font-weight: 500;
+}

@@ -67,16 +67,22 @@ npm install
 ```bash
 # .env dosyası oluşturun
 JWT_SECRET=your_jwt_secret_key
-MONGODB_URI=mongodb://localhost:27017/converter
+MONGODB_URI=mongodb://localhost:27017/your_db_name
+PORT=4000
 ```
 
-4. **MongoDB ve RabbitMQ servislerini başlatın:**
+4. **-RabbitMQ servisını kur ve başlat **
 ```bash
-# MongoDB
-mongod
-
 # RabbitMQ
-rabbitmq-server
+1. Docker'a RabbıtMQ kurma:
+docker pull rabbitmq:3-management
+
+2. RabbitMQ Container'ını Çalıştırma
+bashdocker run -d \
+  --name rabbitmq \
+  -p 5672:5672 \
+  -p 15672:15672 \
+  rabbitmq:3-management
 ```
 
 5. **Worker süreçlerini başlatın:**
